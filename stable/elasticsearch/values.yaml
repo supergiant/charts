@@ -3,14 +3,15 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: nginx
-  tag: stable
+  repository: elasticsearch
+  tag: 2.3.3
   pullPolicy: IfNotPresent
 service:
-  name: nginx
+  name: elasticsearch
   type: ClusterIP
-  externalPort: 80
-  internalPort: 80
+  externalPort: 9200
+  internalPort: 9200
+  transportPort: 9300
 resources:
   limits:
     cpu: 100m
@@ -18,4 +19,3 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
-
