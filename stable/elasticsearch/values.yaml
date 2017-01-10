@@ -7,20 +7,20 @@ image:
   tag: 2.3.3
   pullPolicy: IfNotPresent
 service:
-  name: elasticsearch-http
+  name: http
   type: ClusterIP
   externalPort: 9200
   internalPort: 9200
 transport:
-  name: elasticsearch-transport
+  name: transport
   internalPort: 9300
 resources:
   limits:
-    cpu: 100m
-    memory: 128Mi
+    cpu: 500m
+    memory: 512Mi
   requests:
-    cpu: 100m
-    memory: 128Mi
+    cpu: 500m
+    memory: 512Mi
 persistence:
   enabled: true
   storageClass: generic
