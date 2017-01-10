@@ -39,17 +39,16 @@ spec:
         - name: data-1
           mountPath: /data-1
       volumes:
-      - name: data-0
       {{- if .Values.persistence.enabled }}
+      - name: data-0
         persistentVolumeClaim:
           claimName: {{ template "fullname" . }}-data0
-      {{- else }}
-        emptyDir: {}
-      {{- end -}}
       - name: data-1
-      {{- if .Values.persistence.enabled }}
         persistentVolumeClaim:
           claimName: {{ template "fullname" . }}-data1
       {{- else }}
+      - name: data-0
+        emptyDir: {}
+      - name: data-1
         emptyDir: {}
       {{- end -}}
