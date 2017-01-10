@@ -15,6 +15,12 @@ spec:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+        command:
+          - elasticsearch
+          - -Des.insecure.allow.root=true
+          - -Des.discovery.zen.ping.unicast.hosts=transport.my-es-cluster.svc.cluster.local:9300
+          - -Des.path.data=/data-0,/data-1
+          - -Des.path.logs=/data-0
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
@@ -27,3 +33,23 @@ spec:
             port: {{ .Values.service.internalPort }}
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+        volumeMounts:
+        - name: data-0
+          mountPath: /data-0
+        - name: data-1
+          mountPath: /data-1
+      volumes:
+      - name: data-0
+      {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "fullname" . }}-data0
+      {{- else }}
+        emptyDir: {}
+      {{- end -}}
+      - name: data-1
+      {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ template "fullname" . }}-data1
+      {{- else }}
+        emptyDir: {}
+      {{- end -}}
