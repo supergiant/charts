@@ -5,26 +5,26 @@ metadata:
   labels:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
 spec:
-  serviceName: elasticsearch
+  serviceName: {{ template "fullname" . }}-transport
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       annotations:
         pod.alpha.kubernetes.io/initialized: "true"
       labels:
-        app: elasticsearch
+        app: {{ template "fullname" . }}
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-      - name: elasticsearch
-        image: elasticsearch:2.4
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         command:
         - sh
         - -c
         - plugin install lmenezes/elasticsearch-kopf ; plugin install cloud-aws ; elasticsearch -Des.insecure.allow.root=true -Des.discovery.zen.minimum_master_nodes=2 -Des.discovery.zen.ping.unicast.hosts={{ template "fullname" . }}-transport.default.svc.cluster.local:9300 -Des.path.data=/data-0,/data-1 -Des.path.logs=/data-0
         resources:
           requests:
-            memory: 1.5Gi
+            memory: {{ .Values.resources.limits.memory }}
         volumeMounts:
         - name: data-0
           mountPath: /data-0

@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: elasticsearch
-  tag: 2.3.3
+  tag: 2.4
   pullPolicy: IfNotPresent
 service:
   name: http
