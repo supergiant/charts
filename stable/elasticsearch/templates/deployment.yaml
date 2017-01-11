@@ -18,7 +18,7 @@ spec:
         command:
           - elasticsearch
           - -Des.insecure.allow.root=true
-          - -Des.discovery.zen.ping.unicast.hosts=transport.{{ template "fullname" . }}-transport.svc.cluster.local:9300
+          - -Des.discovery.zen.ping.unicast.hosts={{ template "fullname" . }}-transport.default.svc.cluster.local:9300
           - -Des.path.data=/data-0,/data-1
           - -Des.path.logs=/data-0
         ports:
