@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  elasticsearch:
+  - apiVersion: v1
+    created: 2017-01-13T10:56:59.388117197-06:00
+    description: A Helm chart for elasticsearch
+    digest: 6b2361c36c6f85cdae71dde9746c8bcd1d2914c9558b11e35075abe27385091b
+    name: elasticsearch
+    urls:
+    - https://supergiant.github.io/tscharts/elasticsearch-0.1.0.tgz
+    version: 0.1.0
+generated: 2017-01-13T10:56:59.386929302-06:00
