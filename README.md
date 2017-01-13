@@ -7,3 +7,8 @@
  3. Move the generated package file to the docs/ folder. `mv mychart-0.1.0.tgz docs`
  4. Generate an updated index file for the repo. `helm repo index docs --url https://supergiant.github.io/tscharts`
  5. add, commit, push.
+
+
+## To add this repo to your helm client.
+
+`helm repo add supergiant https://supergiant.github.io/charts`
