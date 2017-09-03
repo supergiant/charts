@@ -1,7 +1,7 @@
 namespace: unique-id
 api:
   enabled: true
-  replicaCount: 1
+  # replicaCount: 1  <- this should stay 1 until postgres is included.
   name: supergiant-api
   support: # Sets a default hidden support password for your cluster.
     enabled: true
@@ -31,3 +31,8 @@ ingress:
   name: supergiant
   annotations:
     traefik.frontend.rule.type: PathPrefixStrip
+persistence:
+  enabled: true
+  storageClass: generic
+  accessMode: ReadWriteOnce
+  size: 8Gi
