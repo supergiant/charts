@@ -1,0 +1,18 @@
+uiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.ui.name }}
+  labels:
+    app: {{ .Values.ui.name }}
+    chart: {{ .Values.ui.name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  ports:
+    - port: {{ .Values.ui.service.externalPort }}
+      targetPort: {{ .Values.ui.service.internalPort }}
+      protocol: TCP
+      name: {{ .Values.ui.name }}
+  selector:
+    app: {{ .Values.ui.name }}
+    release: {{ .Release.Name }}

@@ -1,0 +1,38 @@
+uiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Values.ui.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.ui.name }}
+    chart: {{ .Values.ui.name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.ui.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.ui.name }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Values.ui.name }}
+          image: "{{ .Values.ui.image.repository }}:{{ .Values.ui.image.tag }}"
+          imagePullPolicy: {{ .Values.ui.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.ui.service.internalPort }}
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: {{ .Values.ui.service.internalPort }}
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: {{ .Values.ui.service.internalPort }}
+          resources:
+{{ toYaml .Values.ui.resources | indent 12 }}
+    {{- if .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml .Values.nodeSelector | indent 8 }}
+    {{- end }}

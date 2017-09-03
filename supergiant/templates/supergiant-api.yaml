@@ -1,0 +1,46 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Values.api.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.api.name }}
+    chart: {{ .Values.api.name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.api.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.api.name }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Values.api.name }}
+          image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
+          imagePullPolicy: {{ .Values.api.image.pullPolicy }}
+          command:
+          - /supergiant-api
+          - --config-file
+          - config.json
+          {{- if .Values.api.support.enabled -}}
+          - --support-password
+          - {{ .Values.api.support.password }}
+          {{- end -}}
+          ports:
+            - containerPort: {{ .Values.api.service.internalPort }}
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: {{ .Values.api.service.internalPort }}
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: {{ .Values.api.service.internalPort }}
+          resources:
+{{ toYaml .Values.api.resources | indent 12 }}
+    {{- if .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml .Values.nodeSelector | indent 8 }}
+    {{- end }}

@@ -1,0 +1,33 @@
+namespace: unique-id
+api:
+  enabled: true
+  replicaCount: 1
+  name: supergiant-api
+  support: # Sets a default hidden support password for your cluster.
+    enabled: true
+    password: cheese1234
+  image:
+    repository: supergiant/supergiant-api
+    tag: unstable-linux-x64
+    pullPolicy: Always
+  service:
+    externalPort: 80
+    internalPort: 8080
+  resources: {}
+ui:
+  enabled: true
+  replicaCount: 1
+  name: supergiant-ui
+  image:
+    repository: supergiant/supergiant-ui
+    tag: unstable-linux-x64
+    pullPolicy: Always
+  service:
+    externalPort: 80
+    internalPort: 3001
+  resources: {}
+ingress:
+  enabled: true
+  name: supergiant
+  annotations:
+    traefik.frontend.rule.type: PathPrefixStrip
