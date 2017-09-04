@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: {{ .Values.ui.name }}
-  namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Values.ui.name }}
     chart: {{ .Values.ui.name }}-{{ .Chart.Version | replace "+" "_" }}

@@ -3,7 +3,6 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Values.ingress.name }}
-  namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Values.ingress.name }}
     chart: {{ .Values.ingress.name }}-{{ .Chart.Version | replace "+" "_" }}
