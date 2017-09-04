@@ -2,11 +2,20 @@ apiVersion: v1
 entries:
   elasticsearch:
   - apiVersion: v1
-    created: 2017-01-13T11:27:44.223633385-06:00
+    created: 2017-09-03T19:54:26.511611466-05:00
     description: A Helm chart for elasticsearch
     digest: 6b2361c36c6f85cdae71dde9746c8bcd1d2914c9558b11e35075abe27385091b
     name: elasticsearch
     urls:
     - https://supergiant.github.io/charts/elasticsearch-0.1.0.tgz
     version: 0.1.0
-generated: 2017-01-13T11:27:44.222345515-06:00
+  supergiant:
+  - apiVersion: v1
+    created: 2017-09-03T19:54:26.51186926-05:00
+    description: A Helm chart for Kubernetes
+    digest: fe6382fbe827189f4b980c56ee680e0f95b9282a03e8adba7995c5e7477df814
+    name: supergiant
+    urls:
+    - https://supergiant.github.io/charts/supergiant-0.1.0.tgz
+    version: 0.1.0
+generated: 2017-09-03T19:54:26.509208703-05:00
