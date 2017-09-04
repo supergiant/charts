@@ -24,10 +24,10 @@ spec:
           - /supergiant-api
           - --config-file
           - config.json
-          {{- if .Values.api.support.enabled -}}
+          {{- if .Values.api.support.enabled }}
           - --support-password
           - {{ .Values.api.support.password }}
-          {{- end -}}
+          {{- end }}
           ports:
             - containerPort: {{ .Values.api.service.internalPort }}
           # livenessProbe:
