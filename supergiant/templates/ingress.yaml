@@ -17,11 +17,11 @@ spec:
     - host:
       http:
         paths:
-          - path: /{{ .Values.namespace }}/ui
+          - path: /{{ .Values.uniqueurl }}/ui
             backend:
               serviceName: {{ .Values.ui.name }}
               servicePort: {{ .Values.ui.service.externalPort }}
-          - path: /{{ .Values.namespace }}/api
+          - path: /{{ .Values.uniqueurl }}/api
             backend:
               serviceName: {{ .Values.api.name }}
               servicePort: {{ .Values.api.service.externalPort }}

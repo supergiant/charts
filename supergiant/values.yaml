@@ -35,3 +35,4 @@ persistence:
   storageClass: generic
   accessMode: ReadWriteOnce
   size: 8Gi
+uniqueurl: supergiant
