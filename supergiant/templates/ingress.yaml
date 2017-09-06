@@ -21,7 +21,7 @@ spec:
             backend:
               serviceName: {{ .Values.ui.name }}
               servicePort: {{ .Values.ui.service.externalPort }}
-          - path: /{{ .Values.uniqueurl }}/api
+          - path: /{{ .Values.uniqueurl }}/server
             backend:
               serviceName: {{ .Values.api.name }}
               servicePort: {{ .Values.api.service.externalPort }}

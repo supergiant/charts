@@ -1,0 +1,18 @@
+# Default values for traefik.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+traefik:
+  name: traefik-proxy
+  service:
+    name: nginx
+    type: ClusterIP
+    externalPort: 80
+    internalPort: 80
+  image:
+    repository: nginx
+    tag: stable
+    pullPolicy: IfNotPresent
+
+
+resources: {}
