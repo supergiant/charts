@@ -26,10 +26,7 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
         ports:
         - containerPort: {{ .Values.traefik.service.internalServerPort }}
-          hostPort: {{ .Values.traefik.service.internalServerPort }}
-          name: {{ .Values.traefik.name }}-proxy
         - containerPort: {{ .Values.traefik.service.internalUIPort }}
-          name: {{ .Values.traefik.name }}-traefik-ui
         args:
         - --web
         - --kubernetes
