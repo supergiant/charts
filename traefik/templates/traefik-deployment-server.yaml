@@ -4,6 +4,9 @@ metadata:
   name: {{ .Values.traefik.name }}
   labels:
     app: {{ .Values.traefik.name }}
+    chart: {{ .Values.traefik.name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
     tier: proxy
   namespace: kube-system
 spec:

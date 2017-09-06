@@ -5,6 +5,12 @@ metadata:
     kubernetes.io/cluster-service: "true"
     kubernetes.io/name: {{ .Values.traefik.name }}-traefik-ui
   name: {{ .Values.traefik.name }}-traefik-ui
+  labels:
+    app: {{ .Values.traefik.name }}
+    chart: {{ .Values.traefik.name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    tier: proxy
   namespace: kube-system
 spec:
   selector:
