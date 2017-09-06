@@ -4,6 +4,7 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "http"
   name: {{ .Values.traefik.name }}-traefik-ui
+  namespace: kube-system
 spec:
   type: LoadBalancer
   selector:

@@ -5,6 +5,7 @@ metadata:
     kubernetes.io/cluster-service: "true"
     kubernetes.io/name: {{ .Values.traefik.name }}-traefik-ui
   name: {{ .Values.traefik.name }}-traefik-ui
+  namespace: kube-system
 spec:
   selector:
     app: {{ .Values.traefik.name }}
