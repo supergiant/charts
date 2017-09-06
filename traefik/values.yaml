@@ -5,14 +5,18 @@ replicaCount: 1
 traefik:
   name: traefik-proxy
   service:
-    name: nginx
-    type: ClusterIP
-    externalPort: 80
-    internalPort: 80
+    externalServerPort: 80
+    internalServerPort: 80
+    externalUIPort: 80
+    internalUIPort: 8080
   image:
-    repository: nginx
-    tag: stable
+    repository: traefik
+    tag: v1.4-alpine
     pullPolicy: IfNotPresent
-
-
-resources: {}
+resources:
+  limits:
+    cpu: 200m
+    memory: 30Mi
+  requests:
+    cpu: 100m
+    memory: 30Mi

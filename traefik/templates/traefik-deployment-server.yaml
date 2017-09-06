@@ -1,0 +1,41 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: {{ .Values.traefik.name }}
+  labels:
+    app: {{ .Values.traefik.name }}
+    tier: proxy
+  namespace: kube-system
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.traefik.name }}
+      tier: proxy
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.traefik.name }}
+        tier: proxy
+    spec:
+      terminationGracePeriodSeconds: 60
+      containers:
+      - image: "{{ .Values.traefik.image.repository }}:{{ .Values.traefik.image.tag }}"
+        name: {{ .Values.traefik.name }}
+        resources:
+          requests:
+            limits:
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}
+            requests:
+              cpu: {{ .Values.resources.requests.cpu }}
+              memory: {{ .Values.resources.requests.memory }}
+        ports:
+        - containerPort: {{ .Values.traefik.service.internalServerPort }}
+          hostPort: {{ .Values.traefik.service.internalServerPort }}
+          name: {{ .Values.traefik.name }}-proxy
+        - containerPort: {{ .Values.traefik.service.internalUIPort }}
+          name: {{ .Values.traefik.name }}-traefik-ui
+        args:
+        - --web
+        - --kubernetes
