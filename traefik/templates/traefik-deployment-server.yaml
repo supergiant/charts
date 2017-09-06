@@ -23,7 +23,7 @@ spec:
       - image: "{{ .Values.traefik.image.repository }}:{{ .Values.traefik.image.tag }}"
         name: {{ .Values.traefik.name }}
         resources:
-{{ toYaml .Values.api.resources | indent 12 }}
+{{ toYaml .Values.resources | indent 12 }}
         ports:
         - containerPort: {{ .Values.traefik.service.internalServerPort }}
           hostPort: {{ .Values.traefik.service.internalServerPort }}

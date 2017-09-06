@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   elasticsearch:
   - apiVersion: v1
-    created: 2017-09-06T18:35:49.339390956-05:00
+    created: 2017-09-06T18:39:11.12246676-05:00
     description: A Helm chart for elasticsearch
     digest: fba23e9ebd5c260653998f06cbd20cb85a10e0475a40d200ec33d9cebe58a962
     name: elasticsearch
@@ -11,7 +11,7 @@ entries:
     version: 0.1.0
   supergiant:
   - apiVersion: v1
-    created: 2017-09-06T18:35:49.33963826-05:00
+    created: 2017-09-06T18:39:11.122720216-05:00
     description: A Helm chart for Kubernetes
     digest: e866d3196ac05d28cb8dc2b28498aa826221ce01ca671adda6507765f65ac219
     name: supergiant
@@ -20,11 +20,11 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2017-09-06T18:35:49.339893361-05:00
+    created: 2017-09-06T18:39:11.122916882-05:00
     description: A Helm chart for Kubernetes
-    digest: e9b9607230833524277ad6e63698fc65f01c766280165ee6cbbe5b7bf2256bdb
+    digest: 099b6aa549e9aedd5ad28372fb3ac06b8f6372245e053174ef910f3df9dff4ea
     name: traefik
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2017-09-06T18:35:49.338961571-05:00
+generated: 2017-09-06T18:39:11.121997326-05:00
