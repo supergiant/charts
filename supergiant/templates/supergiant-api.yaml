@@ -18,6 +18,8 @@ spec:
       containers:
         - name: {{ .Values.api.name }}
           image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
           imagePullPolicy: {{ .Values.api.image.pullPolicy }}
           command:
           - /supergiant-api
@@ -29,8 +31,6 @@ spec:
           {{- end }}
           ports:
             - containerPort: {{ .Values.api.service.internalPort }}
-          resources:
-{{ toYaml .Values.resources | indent 12 }}
         volumeMounts:
         - name: sg-data
           mountPath: /tmp
