@@ -31,7 +31,6 @@ spec:
             - containerPort: {{ .Values.api.service.internalPort }}
           resources:
 {{ toYaml .Values.api.resources | indent 12 }}
-    {{- if .Values.nodeSelector }}
         volumeMounts:
         - name: sg-data
           mountPath: /tmp
