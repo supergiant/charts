@@ -5,7 +5,7 @@ replicaCount: 1
 traefik:
   name: traefik-proxy
   service:
-    externalServerPort: 80
+    externalServerPort: 443
     internalServerPort: 80
     externalUIPort: 80
     internalUIPort: 8080
