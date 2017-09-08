@@ -9,6 +9,7 @@ traefik:
     internalServerPort: 80
     externalUIPort: 80
     internalUIPort: 8080
+    cert: CertHere
   image:
     repository: traefik
     tag: v1.4-alpine
