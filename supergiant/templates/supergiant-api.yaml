@@ -8,7 +8,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  replicas: 1 ##{{ .Values.api.replicaCount }}
+  replicas: 1
   template:
     metadata:
       labels:
@@ -29,30 +29,13 @@ spec:
           {{- end }}
           ports:
             - containerPort: {{ .Values.api.service.internalPort }}
-          # livenessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: {{ .Values.api.service.internalPort }}
-          # readinessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: {{ .Values.api.service.internalPort }}
           resources:
 {{ toYaml .Values.api.resources | indent 12 }}
     {{- if .Values.nodeSelector }}
         volumeMounts:
         - name: sg-data
           mountPath: /tmp
-  volumeClaimTemplates:
-  - metadata:
-      name: sg-data
-      annotations:
-        volume.alpha.kubernetes.io/storage-class: {{ .Values.persistence.storageClass | quote }}
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: {{ .Values.persistence.size | quote }}
-      nodeSelector:
-{{ toYaml .Values.nodeSelector | indent 8 }}
-    {{- end }}
+      volumes:
+      - name: sg-data
+      hostPath:
+        path: /efs/{{ .Values.uniqueurl }}
