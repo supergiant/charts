@@ -37,4 +37,4 @@ spec:
       volumes:
       - name: sg-data
         hostPath:
-        path: /efs/{{ .Values.uniqueurl }}
+          path: /efs/{{ .Values.uniqueurl }}
