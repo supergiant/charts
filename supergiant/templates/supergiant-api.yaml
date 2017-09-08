@@ -34,7 +34,7 @@ spec:
           volumeMounts:
           - name: sg-data
             mountPath: /tmp
-  volumes:
-  - name: sg-data
-    hostPath:
-      path: /efs/{{ .Values.uniqueurl }}
+      volumes:
+      - name: sg-data
+        hostPath:
+        path: /efs/{{ .Values.uniqueurl }}
