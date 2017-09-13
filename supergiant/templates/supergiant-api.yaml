@@ -19,7 +19,12 @@ spec:
         - name: {{ .Values.api.name }}
           image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
           resources:
-{{ toYaml .Values.resources | indent 12 }}
+            limits:
+              cpu: {{ .Values.api.resources.limits.cpu }}
+              memory: {{ .Values.api.resources.limits.memory }}
+            requests:
+              cpu: {{ .Values.api.resources.requests.cpu }}
+              memory: {{ .Values.api.resources.requests.memory }}
           imagePullPolicy: {{ .Values.api.image.pullPolicy }}
           command:
           - /supergiant-api
