@@ -20,8 +20,8 @@ api:
       cpu: 500m
       memory: 512Mi
     requests:
-      cpu: 200m
-      memory: 512Mi
+      cpu: 50m
+      memory: 62Mi
 ui:
   enabled: true
   replicaCount: 1
@@ -39,7 +39,7 @@ ui:
       memory: 512Mi
     requests:
       cpu: 50m
-      memory: 100Mi
+      memory: 62Mi
 ingress:
   enabled: true
   name: supergiant
