@@ -1,6 +1,9 @@
 api:
+  psqlhost: host
+  psqluser: user
+  psqlpass: pass
   enabled: true
-  # replicaCount: 1  <- this should stay 1 until postgres is included.
+  replicaCount: 1
   name: supergiant-api
   support: # Sets a default hidden support password for your cluster.
     enabled: true

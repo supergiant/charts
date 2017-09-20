@@ -8,7 +8,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.api.replicaCount }}
   template:
     metadata:
       labels:
@@ -28,6 +28,14 @@ spec:
           imagePullPolicy: {{ .Values.api.image.pullPolicy }}
           command:
           - /supergiant-api
+          - --psql-host
+          - {{ .Values.api.psqlhost }}
+          - --psql-db
+          - {{ .Values.uniqueurl }}
+          - --psql-user
+          - {{ .Values.api.psqluser }}
+          - --psql-pass
+          - {{ .Values.api.psqlpass }}
           - --config-file
           - config.json
           {{- if .Values.api.support.enabled }}
@@ -36,10 +44,3 @@ spec:
           {{- end }}
           ports:
             - containerPort: {{ .Values.api.service.internalPort }}
-          volumeMounts:
-          - name: sg-data
-            mountPath: /tmp
-      volumes:
-      - name: sg-data
-        hostPath:
-          path: /efs/{{ .Values.uniqueurl }}
