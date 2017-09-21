@@ -44,3 +44,10 @@ spec:
           {{- end }}
           ports:
             - containerPort: {{ .Values.api.service.internalPort }}
+          volumeMounts:
+          - name: sg-data
+            mountPath: /tmp
+      volumes:
+      - name: sg-data
+        hostPath:
+          path: /efs/{{ .Values.uniqueurl }}
