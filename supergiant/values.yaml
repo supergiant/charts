@@ -1,4 +1,6 @@
 api:
+  arch: amd64
+  paql: false
   psqlhost: host
   psqluser: user
   psqlpass: pass
@@ -23,6 +25,7 @@ api:
       cpu: 50m
       memory: 62Mi
 ui:
+  arch: amd64
   enabled: true
   replicaCount: 1
   name: supergiant-ui
