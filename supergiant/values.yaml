@@ -1,6 +1,6 @@
 api:
   arch: amd64
-  paql: false
+  psql: true
   psqlhost: host
   psqluser: user
   psqlpass: pass
