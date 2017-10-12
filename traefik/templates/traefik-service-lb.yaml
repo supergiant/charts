@@ -13,7 +13,7 @@ metadata:
     tier: proxy
   namespace: kube-system
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: {{ .Values.traefik.name }}
     tier: proxy
