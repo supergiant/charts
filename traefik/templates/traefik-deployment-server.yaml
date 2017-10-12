@@ -10,8 +10,6 @@ metadata:
     tier: proxy
   namespace: kube-system
 spec:
-  nodeSelector:
-    beta.kubernetes.io/arch: {{ .Values.traefik.arch }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -23,6 +21,8 @@ spec:
         app: {{ .Values.traefik.name }}
         tier: proxy
     spec:
+      nodeSelector:
+        beta.kubernetes.io/arch: {{ .Values.traefik.arch }}
       terminationGracePeriodSeconds: 60
       containers:
       - image: "{{ .Values.traefik.image.repository }}:{{ .Values.traefik.image.tag }}"
