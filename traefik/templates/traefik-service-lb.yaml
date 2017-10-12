@@ -13,7 +13,7 @@ metadata:
     tier: proxy
   namespace: kube-system
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: {{ .Values.traefik.name }}
     tier: proxy
