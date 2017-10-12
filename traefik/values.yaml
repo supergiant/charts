@@ -12,6 +12,6 @@ traefik:
     cert: CertHere
   image:
     repository: traefik
-    tag: v1.4-alpine
+    tag: 1.4-alpine
     pullPolicy: IfNotPresent
 resources: {}
