@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 traefik:
+  arch: amd64
   name: traefik-proxy
   service:
     externalServerPort: 443

@@ -10,6 +10,8 @@ metadata:
     tier: proxy
   namespace: kube-system
 spec:
+  nodeSelector:
+    beta.kubernetes.io/arch: {{ .Values.traefik.arch }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
