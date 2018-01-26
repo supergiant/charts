@@ -22,8 +22,8 @@ api:
       cpu: 500m
       memory: 512Mi
     requests:
-      cpu: 100m
-      memory: 62Mi
+      cpu: 500m
+      memory: 512Mi
 ui:
   arch: amd64
   enabled: true
