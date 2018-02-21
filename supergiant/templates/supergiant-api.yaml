@@ -19,7 +19,7 @@ spec:
         beta.kubernetes.io/arch: {{ .Values.api.arch }}
       containers:
         - name: {{ .Values.api.name }}
-          image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
+          image: "{{ .Values.api.image.repository }}:latest"
           resources:
             limits:
               cpu: {{ .Values.api.resources.limits.cpu }}

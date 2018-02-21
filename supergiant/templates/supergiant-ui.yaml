@@ -19,7 +19,7 @@ spec:
         beta.kubernetes.io/arch: {{ .Values.api.arch }}
       containers:
         - name: {{ .Values.ui.name }}
-          image: "{{ .Values.ui.image.repository }}:{{ .Values.ui.image.tag }}"
+          image: "{{ .Values.ui.image.repository }}:latest"
           imagePullPolicy: {{ .Values.ui.image.pullPolicy }}
           resources:
             limits:
