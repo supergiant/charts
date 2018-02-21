@@ -12,7 +12,7 @@ api:
     password: cheese1234
   image:
     repository: supergiant/supergiant-api
-    tag: unstable-linux-x64
+    tag: latest
     pullPolicy: Always
   service:
     externalPort: 80
@@ -31,7 +31,7 @@ ui:
   name: supergiant-ui
   image:
     repository: supergiant/supergiant-ui
-    tag: unstable-linux-x64
+    tag: latest
     pullPolicy: Always
   service:
     externalPort: 80
