@@ -1,8 +1,18 @@
 apiVersion: v1
 entries:
+  capacity-service:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-16T11:58:53.554306-06:00
+    description: Capacity Service supergiant.io
+    digest: cddeefb617f3fb64d00ffd185bb4d76e11c86e1a4ef10fe597ef2041957b4d5e
+    name: capacity-service
+    urls:
+    - https://supergiant.github.io/charts/capacity-service-0.1.0.tgz
+    version: 0.1.0
   elasticsearch:
   - apiVersion: v1
-    created: 2018-02-21T11:37:37.422696-06:00
+    created: 2018-11-16T11:58:53.554941-06:00
     description: A Helm chart for elasticsearch
     digest: fba23e9ebd5c260653998f06cbd20cb85a10e0475a40d200ec33d9cebe58a962
     name: elasticsearch
@@ -11,7 +21,7 @@ entries:
     version: 0.1.0
   supergiant:
   - apiVersion: v1
-    created: 2018-02-21T11:37:37.422976-06:00
+    created: 2018-11-16T11:58:53.555551-06:00
     description: A Helm chart for Kubernetes
     digest: 1ee4c845257b465e885024aa2d1e83cba95ee4c4c72550cdff6f72c0785c3884
     name: supergiant
@@ -20,11 +30,11 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2018-02-21T11:37:37.4232-06:00
+    created: 2018-11-16T11:58:53.556087-06:00
     description: A Helm chart for Kubernetes
     digest: c3d68c0fd0d2b11afc4c0800cb30c5d1e953a36611ff679e6bc63624544393cf
     name: traefik
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2018-02-21T11:37:37.422183-06:00
+generated: 2018-11-16T11:58:53.553646-06:00
