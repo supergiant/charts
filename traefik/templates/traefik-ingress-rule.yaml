@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Values.traefik.name }}-traefik-ui-ingress
+  namespace: kube-system
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /traefik
+        backend:
+          serviceName: {{ .Values.traefik.name }}-traefik-ui
+          servicePort: {{ .Values.traefik.service.externalUIPort }}
