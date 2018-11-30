@@ -3,12 +3,12 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v0.0.1
-    created: 2018-11-30T09:19:39.465769-06:00
+    created: 2018-11-30T09:28:53.790689-06:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: bceb9bf314f3158cc5d7662f71c555db4006ede270688b04fce099c2b2b2c5b3
+    digest: a0fa708f0404189f05ae31370efd57b092f00268db86a5a29fdedc586b09725d
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48134724-83961d80-e2a3-11e8-89ca-18b11a548c7f.png
     keywords:
@@ -28,58 +28,39 @@ entries:
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2018-11-30T09:19:39.46644-06:00
+    created: 2018-11-30T09:28:53.791147-06:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
       budget.
-    digest: 2724f6d4ce66bf0b185c2158cfb28e67bbbd160aadcb1d1ffeb8d3e70b7136a3
+    digest: f2c991134ee6161316572fb2234a0834d3894989dc0f77303ae6028fb49efbda
     home: https://github.com/supergiant
     icon: https://user-images.githubusercontent.com/26225544/48772264-8abe2200-eccc-11e8-8b7c-e35225aa9030.png
     name: capacity
     urls:
     - https://supergiant.github.io/charts/capacity-0.1.0.tgz
     version: 0.1.0
-  capacity-service:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-11-30T09:19:39.466851-06:00
-    description: Capacity Service supergiant.io
-    digest: 6d50bdbd609ee7837f123b7d9a656b2e239aba244e50caf6ca60f434392db314
-    name: capacity-service
-    urls:
-    - https://supergiant.github.io/charts/capacity-service-0.1.0.tgz
-    version: 0.1.0
   elasticsearch:
   - apiVersion: v1
-    created: 2018-11-30T09:19:39.467226-06:00
+    created: 2018-11-30T09:28:53.791492-06:00
     description: Elasticsearch is a search engine based on the Lucene library. It
       provides a distributed, multitenant-capable full-text search engine with an
       HTTP web interface and schema-free JSON documents. Elasticsearch is developed
       in Java and is released as open source under the terms of the Apache License.
-    digest: b53b187e592edc638a7028b2f38c28efe9a3451d63e1728cbcc445e659330597
+    digest: b95a56abe508e6e878ecde0e492210f3963ba74a9ceed227fbe7752f8697cd2f
     name: elasticsearch
     urls:
     - https://supergiant.github.io/charts/elasticsearch-0.1.0.tgz
     version: 0.1.0
-  supergiant:
-  - apiVersion: v1
-    created: 2018-11-30T09:19:39.467629-06:00
-    description: A Helm chart for Kubernetes
-    digest: 3165b31159e9cb43e31756bcb59baa6865a916635e489cf7ac4f3cc6be264296
-    name: supergiant
-    urls:
-    - https://supergiant.github.io/charts/supergiant-0.1.0.tgz
-    version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2018-11-30T09:19:39.468061-06:00
+    created: 2018-11-30T09:28:53.791876-06:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
-    digest: 0067923e33a290d0c825991036c116569042d1f5fd3f192a828c1a62e43f204e
+    digest: 0907ec17523c2a83e887e1eb77ba4c65ca5c924c62061d2738a9be30feb3d253
     name: traefik
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-30T09:19:39.464735-06:00
+generated: 2018-11-30T09:28:53.789142-06:00
