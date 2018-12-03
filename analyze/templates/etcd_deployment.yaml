@@ -2,7 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: etcd
+  name: {{ include "etcd.fullname" . }}
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
   labels:
     app: {{ template "etcd.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"

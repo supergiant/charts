@@ -3,6 +3,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
   name: {{ template "etcd.fullname" . }}-pvc
 spec:
   accessModes:
