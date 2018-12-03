@@ -3,12 +3,12 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v0.0.1
-    created: 2018-11-30T09:28:53.790689-06:00
+    created: 2018-12-03T13:23:10.3222924+02:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: a0fa708f0404189f05ae31370efd57b092f00268db86a5a29fdedc586b09725d
+    digest: 87928ef548d314d2ccd0253e2b1bb4773c70c249a3fc1be55f6e18177568db52
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48134724-83961d80-e2a3-11e8-89ca-18b11a548c7f.png
     keywords:
@@ -28,7 +28,7 @@ entries:
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2018-11-30T09:28:53.791147-06:00
+    created: 2018-12-03T13:23:10.3236054+02:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
@@ -42,7 +42,7 @@ entries:
     version: 0.1.0
   elasticsearch:
   - apiVersion: v1
-    created: 2018-11-30T09:28:53.791492-06:00
+    created: 2018-12-03T13:23:10.3240981+02:00
     description: Elasticsearch is a search engine based on the Lucene library. It
       provides a distributed, multitenant-capable full-text search engine with an
       HTTP web interface and schema-free JSON documents. Elasticsearch is developed
@@ -54,7 +54,7 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2018-11-30T09:28:53.791876-06:00
+    created: 2018-12-03T13:23:10.3245717+02:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
@@ -63,4 +63,4 @@ entries:
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-30T09:28:53.789142-06:00
+generated: 2018-12-03T13:23:10.3200398+02:00
