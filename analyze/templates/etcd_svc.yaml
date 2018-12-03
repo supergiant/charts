@@ -2,7 +2,8 @@
 kind: Service
 apiVersion: v1
 metadata:
-	name: {{ include "etcd.fullname" . }}
+  #discoverETCDEndpoint name is hardcoded to fix it discoverETCDEndpoint() need to be reimplemented
+  name: etcd
   labels:
     app: {{ template "etcd.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
