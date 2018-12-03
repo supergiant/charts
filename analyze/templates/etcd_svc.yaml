@@ -2,7 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  #discoverETCDEndpoint name is hardcoded to fix it discoverETCDEndpoint() need to be reimplemented
+  #name is hardcoded for now, to fix it discoverETCDEndpoint() need to be reimplemented
   name: etcd
   labels:
     app: {{ template "etcd.fullname" . }}
