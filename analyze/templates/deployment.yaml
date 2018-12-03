@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "analyze.fullname" . }}
-  namespace: {{ .Values.namespace | default .Release.Namespace }}
   labels:
     app.kubernetes.io/name: {{ include "analyze.name" . }}
     helm.sh/chart: {{ include "analyze.chart" . }}
