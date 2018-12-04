@@ -3,14 +3,14 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v0.0.1
-    created: 2018-12-03T11:10:41.916826-06:00
+    created: 2018-12-04T12:14:58.757741-06:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: b4b15737672d2c77416313feffc5579dcd29d1499f06825785e6a62f6fb35e76
+    digest: 9ad96b1621a106b32dbf29121d8683aa6e56f3b1d0f7626a205349d01ec8c3ef
     home: https://supergiant.io/
-    icon: https://user-images.githubusercontent.com/2936828/48134724-83961d80-e2a3-11e8-89ca-18b11a548c7f.png
+    icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png
     keywords:
     - kubernetes
     - k8s
@@ -28,12 +28,12 @@ entries:
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2018-12-03T11:10:41.917151-06:00
+    created: 2018-12-04T12:14:58.758332-06:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
       budget.
-    digest: 55416ede677dc1c90dbaa18802cf135b17c3a95d08203911e8007567cc6ba0d9
+    digest: e683d13d86cf1984b4de2bd9d9cb86870906201ce29a316fcf5b4e6b3cdfc562
     home: https://github.com/supergiant
     icon: https://user-images.githubusercontent.com/26225544/48772264-8abe2200-eccc-11e8-8b7c-e35225aa9030.png
     name: capacity
@@ -42,25 +42,25 @@ entries:
     version: 0.1.0
   elasticsearch:
   - apiVersion: v1
-    created: 2018-12-03T11:10:41.917397-06:00
+    created: 2018-12-04T12:14:58.758774-06:00
     description: Elasticsearch is a search engine based on the Lucene library. It
       provides a distributed, multitenant-capable full-text search engine with an
       HTTP web interface and schema-free JSON documents. Elasticsearch is developed
       in Java and is released as open source under the terms of the Apache License.
-    digest: a0372f8bcfcd024afb2c03f007379bab9a8097b2a2e1e6ef87e9ca156a0204d4
+    digest: 2f003bc05e84caca443bbcc00b77cfb38d1ebff11b3429f37a4d8a5c31b46ea5
     name: elasticsearch
     urls:
     - https://supergiant.github.io/charts/elasticsearch-0.1.0.tgz
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2018-12-03T11:10:41.91767-06:00
+    created: 2018-12-04T12:14:58.759312-06:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
-    digest: 89041c6bc9923219f2bedf4c15f7d37ae990389fc4486fcaa44b72406a766a4a
+    digest: 9c13962f33d405d4058485ed3f9a8725dc0796c921a129af03880d2b7816a5f6
     name: traefik
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-03T11:10:41.916191-06:00
+generated: 2018-12-04T12:14:58.756706-06:00
