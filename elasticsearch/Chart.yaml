@@ -1,4 +1,0 @@
-apiVersion: v1
-description: Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in Java and is released as open source under the terms of the Apache License.
-name: elasticsearch
-version: 0.1.0
