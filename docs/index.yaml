@@ -3,12 +3,12 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v0.0.1
-    created: 2018-12-04T12:54:56.254118-06:00
+    created: 2018-12-06T17:53:07.3660859+02:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: ec50d816d7e432ab1c90a3c2e02cb0ab9d76e30525393a70b1b0d1b687641952
+    digest: 188c8687c21d0f14c001296471e77bec7ece84b6eed5d9cdbbfdf973192f8263
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png
     keywords:
@@ -28,7 +28,7 @@ entries:
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2018-12-04T12:54:56.254713-06:00
+    created: 2018-12-06T17:53:07.3675388+02:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
@@ -42,7 +42,7 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2018-12-04T12:54:56.255174-06:00
+    created: 2018-12-06T17:53:07.368933+02:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
@@ -51,4 +51,4 @@ entries:
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-04T12:54:56.253003-06:00
+generated: 2018-12-06T17:53:07.3641868+02:00
