@@ -3,12 +3,12 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v0.0.1
-    created: 2018-12-06T17:53:07.3660859+02:00
+    created: 2018-12-06T10:09:43.381298-06:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: 188c8687c21d0f14c001296471e77bec7ece84b6eed5d9cdbbfdf973192f8263
+    digest: 96e2ab37bb74370ea1982e9f529f77b953b4198517a2832f9f7deff9a163f3e6
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png
     keywords:
@@ -28,12 +28,12 @@ entries:
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2018-12-06T17:53:07.3675388+02:00
+    created: 2018-12-06T10:09:43.381914-06:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
       budget.
-    digest: 799d5f61a026e43cd4acf5b8d16fe1f84dd10d45b133cb97cc19627c4877781c
+    digest: 4216f0e96bb2507258d98bbf2ee258f11ddeb338e89f819a6a7ce7963ce3950d
     home: https://github.com/supergiant
     icon: https://user-images.githubusercontent.com/26225544/48772264-8abe2200-eccc-11e8-8b7c-e35225aa9030.png
     name: capacity
@@ -42,13 +42,13 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2018-12-06T17:53:07.368933+02:00
+    created: 2018-12-06T10:09:43.382344-06:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
-    digest: f1ec6820075e0c77d3c1191a3f4f66f08dee5189eea46355a5f3f3ac53bfef53
+    digest: f96ab3b6c7a58ec6dd30f7dc4adb529f17471b59f1841fd8f3431d6c08a01eb8
     name: traefik
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-06T17:53:07.3641868+02:00
+generated: 2018-12-06T10:09:43.380376-06:00
