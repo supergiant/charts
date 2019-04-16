@@ -19,4 +19,7 @@ data:
      server_port: {{ .Values.service.internalPort }}
    etcd:
      endpoints:
+{{- if .Values.etcd.endpoints }}
+       - "{{ required "You need to populate .Values.etcd.endpoints with ETCD enpoinds"  .Values.etcd.endpoints }}"
+{{- end }}
 

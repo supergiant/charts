@@ -1,6 +1,6 @@
 name: analyze
-version: 0.0.1
-appVersion: "v0.0.1"
+version: 2.0.0
+appVersion: "v2.0.0"
 apiVersion: v1
 description: Analyze provides an organization with feedback on workload resources and makes recommendations for optimizing your utilization and getting the best return on your hardware investment. After all, scaling down at the right time is just as important as scaling up...right?
 icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png

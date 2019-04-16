@@ -20,7 +20,7 @@ spec:
       restartPolicy: "Never"
       containers:
         - name: "{{ .Release.Name }}-post-install-job"
-          image: "supergiant/analyze-registry-job:plugin-test-4-g071d7b0"
+          image: "{{ .Values.image.jobRepository }}:{{ .Values.image.jobTag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args: []
           env:

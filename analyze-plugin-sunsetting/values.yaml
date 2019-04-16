@@ -6,7 +6,9 @@ replicaCount: 1
 
 image:
   repository: supergiant/analyze-plugin-sunsetting
-  tag: 0.0.1-5-ge149da2
+  jobRepository: supergiant/analyze-registry-job
+  tag: 0.0.1-11-g9b54a51
+  jobTag: plugin-test-18-gd02d1db
   pullPolicy: Always
 
 nameOverride: ""
