@@ -26,3 +26,7 @@ spec:
           env:
           - name: PLUGIN_SERVICE_NAME
             value: {{ include "analyze-plugin-sunsetting.fullname" . }}
+          - name: PLUGIN_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace

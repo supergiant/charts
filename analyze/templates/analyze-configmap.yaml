@@ -18,6 +18,7 @@ data:
      server_host: "0.0.0.0"
      server_port: {{ .Values.service.internalPort }}
    etcd:
+     dialTimeout: 5s
      endpoints:
 {{- if .Values.etcd.endpoints }}
        - "{{ required "You need to populate .Values.etcd.endpoints with ETCD enpoinds"  .Values.etcd.endpoints }}"

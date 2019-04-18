@@ -3,12 +3,12 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-04-17T00:17:36.9494037+03:00
+    created: 2019-04-18T13:29:07.4735538+03:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: 30d68316a501ede44749fd938930bc5fe42bd00cac40fb2d108bade053fafde7
+    digest: a4465dfc378c3b657e8104eb6e22b19a9ef03a4e7af3932f72a734cee38726ee
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png
     keywords:
@@ -28,9 +28,9 @@ entries:
   analyze-plugin-sunsetting:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-04-17T00:17:36.9507999+03:00
+    created: 2019-04-18T13:29:07.4750945+03:00
     description: Ananlyze sunsetting plugin.
-    digest: a9ab0db67b11b19f65d71bc3399d7a054e13af2a38f049f8d440ec9a23061261
+    digest: 80e0d1443408c5790b6dec02ecb5bfc3170f9101226995f69d85b2985f581995
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48134724-83961d80-e2a3-11e8-89ca-18b11a548c7f.png
     keywords:
@@ -51,7 +51,7 @@ entries:
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2019-04-17T00:17:36.9520625+03:00
+    created: 2019-04-18T13:29:07.475914+03:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
@@ -65,7 +65,7 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2019-04-17T00:17:36.9533882+03:00
+    created: 2019-04-18T13:29:07.4765981+03:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
@@ -74,4 +74,4 @@ entries:
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2019-04-17T00:17:36.9479784+03:00
+generated: 2019-04-18T13:29:07.4720421+03:00

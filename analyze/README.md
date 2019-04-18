@@ -25,7 +25,7 @@ $ kubectl describe svc etcd-cluster-client --namespace=kube-system
 To install Analyze-Core use:
 ```console
 $ helm repo add supergiant https://supergiant.github.io/charts
-$ helm install --name analyze-core --namespace=kube-system supergiant/analyze --set etcd.endpoints=etcd-cluster-client
+$ helm install --name analyze-core --namespace=kube-system supergiant/analyze --set etcd.endpoints=etcd-cluster-client:2379
 ``` 
 
 Introduction
