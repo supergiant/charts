@@ -3,12 +3,12 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-04-21T15:46:32.5997765+03:00
+    created: 2019-04-21T16:10:56.0809254+03:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: 314accbb022f89787edffb9db2671acaa8a08981c33ac921c0c7fd49c268fbe7
+    digest: 4fd473508c20688880b005ca0d2a229f2b807640aee7bfb5adf00c8daf6bc49c
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png
     keywords:
@@ -28,7 +28,7 @@ entries:
   analyze-plugin-sunsetting:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-04-21T15:46:32.6015198+03:00
+    created: 2019-04-21T16:10:56.0818439+03:00
     description: Ananlyze sunsetting plugin.
     digest: 80e0d1443408c5790b6dec02ecb5bfc3170f9101226995f69d85b2985f581995
     home: https://supergiant.io/
@@ -51,7 +51,7 @@ entries:
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2019-04-21T15:46:32.6028561+03:00
+    created: 2019-04-21T16:10:56.0826055+03:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
@@ -65,7 +65,7 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2019-04-21T15:46:32.6042251+03:00
+    created: 2019-04-21T16:10:56.083376+03:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
@@ -74,4 +74,4 @@ entries:
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2019-04-21T15:46:32.5961255+03:00
+generated: 2019-04-21T16:10:56.0786556+03:00
