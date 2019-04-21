@@ -1,12 +1,12 @@
 Analyze Core
 =======
 
-Analyze Core is a scheduler server exposes rich APIs for its plugins and provides Web interface
+Analyze Core is a scheduler server that exposes a rich API for its plugins and also provides an intuitive Web interface.
 
 TL;DR;
 ------
 
-if you don't have ETCD server just
+If you do not have ETCD server, simply run:
 ```console
 $ helm install stable/etcd-operator --name my-release-o --namespace kube-system --set deployments.etcdOperator=true
 $ cat <<EOF | kubectl apply --namespace=kube-system -f -
