@@ -3,13 +3,12 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-revisionHistoryLimit: 3
 
 image:
   repository: supergiant/analyze
   nodeagentRepository: supergiant/analyze-nodeagent
-  tag: plugin-test-4-g071d7b0
-  nodeagentTag: plugin-test-4-g071d7b0
+  tag: 2.0.0-beta.2-24-gf30a2b4
+  nodeagentTag: 2.0.0-beta.2-24-gf30a2b4
   pullPolicy: Always
 
 nameOverride: ""
@@ -34,33 +33,18 @@ tolerations: []
 
 affinity: {}
 
-## Set default image settings and persistence settings of etcd
+
 etcd:
-  ## For available images please check: https://hub.docker.com/r/pachyderm/etcd/tags or: https://quay.io/repository/coreos/etcd?tag=latest&tab=tags
-  image:
-    repository: quay.io/coreos/etcd
-    tag: v3.3.5
-    pullPolicy: IfNotPresent
-    ## Enable persistence using Persistent Volume Claims
-    ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
-  persistence:
-    enabled: false
-    ## etcd data Persistent Volume Storage Class
-    ## If defined, storageClassName: <storageClass>
-    ## If set to "-", storageClassName: "", which disables dynamic provisioning
-    ## If undefined (the default) or set to null, no storageClassName spec is
-    ## set, choosing the default provisioner. (gp2 on AWS, standard on
-    ## GKE, AWS & OpenStack)
-    # storageClass: "-"
-    ## Set default PVC size
-    size: 20G
-    ## Set default PVC access mode: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
-    accessMode: ReadWriteOnce
-  resources:
-    ## For non-local deployments, 1 cpu and 2G of memory requests are recommended
-    requests:
-      cpu: 250m
-      memory: 256M
+  endpoints:
+
+  # Communication with etcd can be encrypted and authenticated with a certificate.
+  # In order to enable it, add 'tls' section providing existing secret
+  # containing CA certificate, client certificate and client key.
+  # tls:
+  #   existingSecret: etcd-tls-secret
+  #   cert: client.crt
+  #   key: client.key
+  #   ca: ca.crt
 
 cloudProviderType: "aws" ## need to be enum "aws", "do".
 
