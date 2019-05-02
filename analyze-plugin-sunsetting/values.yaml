@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: supergiant/analyze-plugin-sunsetting
   jobRepository: supergiant/analyze-registry-job
-  tag: 0.0.1-18-g9de4680
+  tag: 0.0.1-18-gc196575
   jobTag: 2.0.0-beta.2-6-gb035645
   pullPolicy: Always
 
@@ -19,6 +19,8 @@ service:
   externalHttpPort: 9922
   externalGrpcPort: 9999
 
+rbac:
+  create: true
 
 resources:
    limits:
