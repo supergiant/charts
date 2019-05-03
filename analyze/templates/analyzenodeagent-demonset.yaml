@@ -22,6 +22,10 @@ spec:
         name: {{ include "analyzenodeagent.fullname" . }}
         app.kubernetes.io/name: analyze-nodeagent
     spec:
+      serviceAccountName: {{ include "serviceaccount.fullname" . }}
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
       containers:
         - name: {{ .Chart.Name }}
           image: {{ .Values.image.nodeagentRepository }}:{{ .Values.image.nodeagentTag }}
