@@ -20,7 +20,4 @@ data:
    etcd:
      dialTimeout: 5s
      endpoints:
-{{- if .Values.etcd.endpoints }}
-       - "{{ required "You need to populate .Values.etcd.endpoints with ETCD endpoints"  .Values.etcd.endpoints }}"
-{{- end }}
-
+     - etcd:2379
