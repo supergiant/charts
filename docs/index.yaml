@@ -3,12 +3,12 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-05-02T20:04:17.8469242+03:00
+    created: 2019-05-08T22:45:59.2279869+03:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
       is just as important as scaling up...right?
-    digest: a616b50d111458d8d58d2822069c6c1720dffec9c89543c12e72f16f76bfdefb
+    digest: 77f744d4dcabf1ecaa768a4b5bc37366d0bde067691d8bb7d16a8954dbedc4e4
     home: https://supergiant.io/
     icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png
     keywords:
@@ -21,37 +21,39 @@ entries:
       name: taaraora
     name: analyze
     sources:
-    - https://github.com/supergiant/robot
+    - https://github.com/supergiant/analyze
     urls:
     - https://supergiant.github.io/charts/analyze-2.0.0.tgz
     version: 2.0.0
-  analyze-plugin-sunsetting:
+  analyze-embedded:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-05-02T20:04:17.8491853+03:00
-    description: Ananlyze sunsetting plugin.
-    digest: 22b6bc49516fd5a291e56574eb6d18e6bb7351d44746ae2e1b42a5100fba1231
+    created: 2019-05-08T22:45:59.2297003+03:00
+    description: Analyze provides an organization with feedback on workload resources
+      and makes recommendations for optimizing your utilization and getting the best
+      return on your hardware investment. After all, scaling down at the right time
+      is just as important as scaling up...right?
+    digest: d28dccaa37975fb9481a33f3f4de38c75f652589d4b7b4854d8bbe0b3ed1ceca
     home: https://supergiant.io/
-    icon: https://user-images.githubusercontent.com/2936828/48134724-83961d80-e2a3-11e8-89ca-18b11a548c7f.png
+    icon: https://user-images.githubusercontent.com/2936828/48772107-0b305300-eccc-11e8-8c72-4bcbd737226b.png
     keywords:
     - kubernetes
     - k8s
     - supergiant
     - qbox
-    - scan
     maintainers:
     - email: dmytro@qbox.io
       name: taaraora
-    name: analyze-plugin-sunsetting
+    name: analyze-embedded
     sources:
-    - https://github.com/supergiant/analyze-plugin-sunsetting
+    - https://github.com/supergiant/analyze
     urls:
-    - https://supergiant.github.io/charts/analyze-plugin-sunsetting-2.0.0.tgz
+    - https://supergiant.github.io/charts/analyze-embedded-2.0.0.tgz
     version: 2.0.0
   capacity:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2019-05-02T20:04:17.8503639+03:00
+    created: 2019-05-08T22:45:59.2312713+03:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
@@ -65,7 +67,7 @@ entries:
     version: 0.1.0
   traefik:
   - apiVersion: v1
-    created: 2019-05-02T20:04:17.851365+03:00
+    created: 2019-05-08T22:45:59.2327695+03:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
@@ -74,4 +76,4 @@ entries:
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2019-05-02T20:04:17.8454433+03:00
+generated: 2019-05-08T22:45:59.225465+03:00
