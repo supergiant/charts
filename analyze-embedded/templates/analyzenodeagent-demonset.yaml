@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{ include "analyzenodeagent.fullname" . }}
+  labels:
+    app.kubernetes.io/name: analyze-nodeagent
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion }}
+    app.kubernetes.io/component: nodeagent
+    app.kubernetes.io/part-of: analyze
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    k8s-app: {{ include "analyzenodeagent.fullname" . }}
+    helm.sh/chart: {{ include "analyze.chart" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+spec:
+  selector:
+    matchLabels:
+      name: {{ include "analyzenodeagent.fullname" . }}
+  template:
+    metadata:
+      labels:
+        name: {{ include "analyzenodeagent.fullname" . }}
+        app.kubernetes.io/name: analyze-nodeagent
+    spec:
+      serviceAccountName: {{ include "serviceaccount.fullname" . }}
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image.nodeagentRepository }}:{{ .Values.image.nodeagentTag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 9292
+              protocol: TCP
+          resources:
+            limits:
+              memory: 200Mi
+            requests:
+              cpu: 100m
+              memory: 50Mi
+      terminationGracePeriodSeconds: 2

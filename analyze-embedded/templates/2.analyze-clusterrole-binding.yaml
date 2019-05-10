@@ -2,10 +2,10 @@
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ include "analyze-plugin-sunsetting.fullname" . }}
+  name: {{ include "analyze.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "analyze-plugin-sunsetting.name" . }}
-    helm.sh/chart: {{ include "analyze-plugin-sunsetting.chart" . }}
+    app.kubernetes.io/name: {{ include "analyze.name" . }}
+    helm.sh/chart: {{ include "analyze.chart" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     app.kubernetes.io/part-of: {{ .Chart.Name }}
     app.kubernetes.io/version: {{ .Chart.AppVersion }}
