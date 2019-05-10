@@ -7,8 +7,8 @@ replicaCount: 1
 image:
   repository: supergiant/analyze
   nodeagentRepository: supergiant/analyze-nodeagent
-  tag: release-2.1-unstable
-  nodeagentTag: release-2.1-unstable
+  tag: latest
+  nodeagentTag: latest
   pullPolicy: Always
 
 nameOverride: ""

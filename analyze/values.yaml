@@ -7,8 +7,8 @@ replicaCount: 1
 image:
   repository: supergiant/analyze
   nodeagentRepository: supergiant/analyze-nodeagent
-  tag: 2.0.0-beta.2-7-gc9663aa
-  nodeagentTag: 2.0.0-beta.2-7-gc9663aa
+  tag: latest
+  nodeagentTag: latest
   pullPolicy: Always
 
 nameOverride: ""
