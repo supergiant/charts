@@ -15,7 +15,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 service:
-  type: NodePort
+  type: ClusterIP
   externalPort: 4443
   internalPort: 9091
 
