@@ -4,7 +4,7 @@ metadata:
   name: {{ include "analyze.fullname" . }}
   labels:
     kubernetes.io/cluster-service: "true"
-    app.kubernetes.io/name: {{ include "analyze.name" . }}
+    app.kubernetes.io/name: analyze
     helm.sh/chart: {{ include "analyze.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
