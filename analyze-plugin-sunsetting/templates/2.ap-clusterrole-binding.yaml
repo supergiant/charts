@@ -1,0 +1,21 @@
+{{- if .Values.rbac.create }}
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ include "analyze-plugin-sunsetting.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "analyze-plugin-sunsetting.name" . }}
+    helm.sh/chart: {{ include "analyze-plugin-sunsetting.chart" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    app.kubernetes.io/part-of: {{ .Chart.Name }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+subjects:
+- kind: ServiceAccount
+  name: {{ include "serviceaccount.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "clusterrole.fullname" . }}
+{{- end }}
