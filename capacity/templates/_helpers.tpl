@@ -33,6 +33,7 @@ Create chart name and version as used by the chart label.
 
 {{/* Generate basic labels */}}
 {{- define "capacity.labels" }}
+app.kubernetes.io/name: {{ template "capacity.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 app.kubernetes.io/version: {{ .Chart.AppVersion }}

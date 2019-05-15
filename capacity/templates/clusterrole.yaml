@@ -4,7 +4,6 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: {{ template "capacity.name" . }}-nodepod-permissions
   labels:
-    app.kubernetes.io/name: {{ template "capacity.name" . }}
 {{ include "capacity.labels" . | indent 4 }}
 rules:
 - apiGroups: [""]

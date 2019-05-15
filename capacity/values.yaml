@@ -7,13 +7,13 @@ fullnameOverride: ""
 
 image:
   repository: supergiant/capacity
-  tag: v0.1.0
+  tag: v2.1.0-beta.1
   pullPolicy: IfNotPresent
 
 config:
+  create: false
   kubescaler:
     raw: ""
-  userdata: ""
 
 serviceAccount:
   create: true

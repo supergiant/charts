@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "capacity.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
-    app.kubernetes.io/name: {{ template "capacity.name" . }}
 {{ include "capacity.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
