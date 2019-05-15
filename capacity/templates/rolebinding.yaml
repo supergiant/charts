@@ -3,13 +3,29 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: {{ template "capacity.name" . }}-configmap
+  namespace: {{ .Release.Namespace }}
   labels:
-    app.kubernetes.io/name: {{ template "capacity.name" . }}
 {{ include "capacity.labels" . | indent 4 }}
 subjects:
 - kind: ServiceAccount
   name: {{ template "capacity.serviceAccountName" . }}
-  namespace: default
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: Role
+  name: {{ template "capacity.name" . }}-configmap-updater
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ template "capacity.name" . }}-configmap
+  namespace: kube-system
+  labels:
+{{ include "capacity.labels" . | indent 4 }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ template "capacity.serviceAccountName" . }}
+    namespace: {{ .Release.Namespace }}
 roleRef:
   kind: Role
   name: {{ template "capacity.name" . }}-configmap-updater
