@@ -4,6 +4,7 @@ metadata:
   name: {{ template "capacity.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
+    kubernetes.io/cluster-service: "true"
 {{ include "capacity.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
