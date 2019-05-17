@@ -11,6 +11,6 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: {{ template "capacity.name" . }}-nodepod-permissions
+  name: {{ template "capacity.fullname" . }}-nodepod-permissions
   apiGroup: rbac.authorization.k8s.io
 {{- end }}

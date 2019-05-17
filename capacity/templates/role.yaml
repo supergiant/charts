@@ -2,7 +2,7 @@
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "capacity.fullname" . }}-configmap-updater
+  name: {{ template "capacity.fullname" . }}-configmap
   namespace: {{ .Release.Namespace }}
   labels:
 {{ include "capacity.labels" . | indent 4 }}
@@ -11,12 +11,11 @@ rules:
   resources: ["configmaps"]
   resourceNames: ['{{ template "capacity.fullname" . }}-config']
   verbs: ["get", "patch"]
-{{- if ne .Release.Namespace "kube-system" }}
 ---
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "capacity.fullname" . }}-configmap-updater
+  name: {{ template "capacity.fullname" . }}-configmap-default
   namespace: kube-system
   labels:
 {{ include "capacity.labels" . | indent 4 }}
@@ -25,5 +24,4 @@ rules:
     resources: ["configmaps"]
     resourceNames: ['capacity']
     verbs: ["get", "patch"]
-{{- end }}
 {{- end }}
