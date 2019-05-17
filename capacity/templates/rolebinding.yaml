@@ -2,7 +2,7 @@
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "capacity.name" . }}-configmap
+  name: {{ template "capacity.fullname" . }}-configmap
   namespace: {{ .Release.Namespace }}
   labels:
 {{ include "capacity.labels" . | indent 4 }}
@@ -12,13 +12,14 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: Role
-  name: {{ template "capacity.name" . }}-configmap-updater
+  name: {{ template "capacity.fullname" . }}-configmap-updater
   apiGroup: rbac.authorization.k8s.io
+{{- if ne .Release.Namespace "kube-system" }}
 ---
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "capacity.name" . }}-configmap
+  name: {{ template "capacity.fullname" . }}-configmap
   namespace: kube-system
   labels:
 {{ include "capacity.labels" . | indent 4 }}
@@ -28,6 +29,7 @@ subjects:
     namespace: {{ .Release.Namespace }}
 roleRef:
   kind: Role
-  name: {{ template "capacity.name" . }}-configmap-updater
+  name: {{ template "capacity.fullname" . }}-configmap-updater
   apiGroup: rbac.authorization.k8s.io
+{{- end }}
 {{- end }}
