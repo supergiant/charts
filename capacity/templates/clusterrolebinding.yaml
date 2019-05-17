@@ -2,7 +2,7 @@
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: {{ template "capacity.name" . }}-permissions
+  name: {{ template "capacity.fullname" . }}-permissions
   labels:
 {{ include "capacity.labels" . | indent 4 }}
 subjects:
