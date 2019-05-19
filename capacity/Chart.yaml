@@ -1,6 +1,6 @@
 apiVersion: v1
-version: 0.2.5
-appVersion: "2.1.0-beta.3"
+version: 0.2.6
+appVersion: "2.1.0-beta.4"
 name: capacity
 description: Capacity ensures that the right hardware is available for the required resource load of your Kubernetes cluster at any given time. This helps prevent over-provisioning of your container environment and overspending on your hardware budget.
 home: https://github.com/supergiant
