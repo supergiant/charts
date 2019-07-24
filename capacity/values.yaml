@@ -7,7 +7,7 @@ fullnameOverride: ""
 
 image:
   repository: supergiant/capacity
-  tag: v2.1.0-beta.4
+  tag: v2.2.0-beta.0
   pullPolicy: IfNotPresent
 
 config:
