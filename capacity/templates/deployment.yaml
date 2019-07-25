@@ -21,7 +21,12 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-{{- if .Values.config.create }}
+{{- if .Values.config.args  }}
+          command:
+          - /bin/capacity-service
+{{ toYaml .Values.config.args | indent 10 }}
+{{- end }}
+{{- if .Values.config.kubescaler.raw  }}
           env:
           - name: CAPACITY_CONFIGMAP_NAME
             value: {{ template "capacity.fullname" . }}-config
