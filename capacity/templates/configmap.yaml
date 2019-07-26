@@ -1,4 +1,4 @@
-{{- if .Values.config.create }}
+{{- if .Values.config.kubescaler.raw }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -8,5 +8,5 @@ metadata:
 {{ include "capacity.labels" . | indent 4 }}
 data:
   kubescaler.conf: |
-    {{ .Values.config.kubescaler.raw }}
+{{ .Values.config.kubescaler.raw | indent 4 }}
 {{- end }}

@@ -7,11 +7,14 @@ fullnameOverride: ""
 
 image:
   repository: supergiant/capacity
-  tag: v2.2.0-beta.0
+  tag: v2.2.0-beta.2
   pullPolicy: IfNotPresent
 
 config:
-  create: false
+  args: {}
+    # - --log-level=debug
+    # - --log-format=json
+    # - --log-hooks=syslog
   kubescaler:
     raw: ""
 
@@ -31,4 +34,3 @@ resources:
     memory: 512Mi
   requests:
     memory: 450Mi
-

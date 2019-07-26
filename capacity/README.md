@@ -8,10 +8,12 @@ Capacity asserts through hardware autoscaling that every pod should have a homeâ
 
 ## Installing the Chart
 
-To install the chart with the release `name my-release`:
+To install the chart with the release name `capacity` to the `capacity` namespace:
 
 ```
-$ helm isntall --name my-release supergiant/capacity \
-        ----set-file config.kubescaler.raw=$PATH_TO_KUBESCALER_CONFIG \
-        ----set-file config.userdata=$PATH_TO_USERDATA
+$ helm install supergiant/capacity \
+        --name capacity \
+        --namespace capacity \
+        --set config.args='{--log-level=debug,--log-format=json}' \
+        --set-file config.kubescaler.raw=$PATH_TO_KUBESCALER_CONFIG
 ```

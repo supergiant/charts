@@ -3,7 +3,7 @@ entries:
   analyze:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-07-24T13:57:50.547024412+03:00
+    created: 2019-07-26T17:31:30.352794614+03:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
@@ -28,7 +28,7 @@ entries:
   analyze-embedded:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: 2019-07-24T13:57:50.547384036+03:00
+    created: 2019-07-26T17:31:30.353260508+03:00
     description: Analyze provides an organization with feedback on workload resources
       and makes recommendations for optimizing your utilization and getting the best
       return on your hardware investment. After all, scaling down at the right time
@@ -53,7 +53,7 @@ entries:
   analyze-plugin-sunsetting:
   - apiVersion: v1
     appVersion: v2.1.0
-    created: 2019-07-24T13:57:50.547650968+03:00
+    created: 2019-07-26T17:31:30.353612233+03:00
     description: Ananlyze sunsetting plugin.
     digest: 1c8df41daa32b4b1e763bc6fed2ea1b126d1784ffd11a03be452340d5578a995
     home: https://supergiant.io/
@@ -75,22 +75,22 @@ entries:
     version: 2.1.0
   capacity:
   - apiVersion: v1
-    appVersion: v2.2.0-beta.0
-    created: 2019-07-24T13:57:50.547948321+03:00
+    appVersion: v2.2.0-beta.2
+    created: 2019-07-26T17:31:30.353907808+03:00
     description: Capacity ensures that the right hardware is available for the required
       resource load of your Kubernetes cluster at any given time. This helps prevent
       over-provisioning of your container environment and overspending on your hardware
       budget.
-    digest: faf5e425f6e23b5e82941858a4ca28cd6737e04655d53c660a419a3dcb440239
+    digest: 6e2cd868565b576c46973ca7c0a3fdbeecab3fa44da5f5a27ab274c9f870fc2c
     home: https://github.com/supergiant
     icon: https://user-images.githubusercontent.com/26225544/48772264-8abe2200-eccc-11e8-8b7c-e35225aa9030.png
     name: capacity
     urls:
-    - https://supergiant.github.io/charts/capacity-0.3.0.tgz
-    version: 0.3.0
+    - https://supergiant.github.io/charts/capacity-0.4.0.tgz
+    version: 0.4.0
   traefik:
   - apiVersion: v1
-    created: 2019-07-24T13:57:50.548117167+03:00
+    created: 2019-07-26T17:31:30.354167427+03:00
     description: A reverse proxy / load balancer that's easy, dynamic, automatic,
       fast, full-featured, open source, production proven, provides metrics, and integrates
       with every major cluster technology... No wonder it's so popular!
@@ -99,4 +99,4 @@ entries:
     urls:
     - https://supergiant.github.io/charts/traefik-0.1.0.tgz
     version: 0.1.0
-generated: 2019-07-24T13:57:50.546511878+03:00
+generated: 2019-07-26T17:31:30.352192034+03:00
